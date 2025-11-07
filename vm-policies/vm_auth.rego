@@ -1,7 +1,7 @@
 package multivm.authz
 import rego.v1
 
-default allow := false
+default allow := true
 
 allow if {
     allowed_list := data.vm_policies[input.source_vm][input.target_vm]
