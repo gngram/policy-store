@@ -1,0 +1,20 @@
+services:
+  - name: github_policy_store
+    # The base URL for fetching the archive
+    url: https://github.com/gngram/policy-store/archive
+
+bundles:
+  # Name of the bundle locally in OPA
+  main_policy:
+    service: github_policy_store
+    # This completes the URL to: .../archive/main.tar.gz
+    resource: "main.tar.gz"
+    polling:
+      # How often OPA checks GitHub for changes (in seconds)
+      min_delay_seconds: 10
+      max_delay_seconds: 30
+    roots: ["policy-store-main"]
+
+#credentials:
+#  bearer:
+#    token: "token"
