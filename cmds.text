@@ -1,3 +1,0 @@
-curl -s "http://localhost:5201/v1/data"
-
-opa run --server  --addr :5201  --config-file=config.yaml
