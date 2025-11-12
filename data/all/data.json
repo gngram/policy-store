@@ -6,6 +6,9 @@
         },
         "vm-B": {
             "central-logger-vm": ["write"]
+        },
+        "vm-c": {
+            "logger-vm": ["read"]
         }
     }
 }
