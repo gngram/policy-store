@@ -1,7 +1,7 @@
 {
     "vm_policies": {
         "vm-A": {
-            "vm-B": ["read", "write", "reboot"],
+            "vm-B": ["read", "write", "restart"],
             "database-vm": ["read"]
         },
         "vm-B": {
