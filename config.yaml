@@ -1,0 +1,23 @@
+services:
+  - name: ghaf_policy
+    url: https://github.com/gngram/policy-store/archive
+    #url: https://github.com/gngram/policy-stoe/archive/refs/heads
+    credentials:
+      bearer:
+        token_path: "/home/gangaram/token.text"
+
+persistence_directory: "/work/opa_cache"
+bundles:
+  ghaf_policy:
+    service: ghaf_policy
+    # The 'resource' is the specific file to append to the base URL
+    resource: "dev.tar.gz" 
+    persist: true 
+    # This MUST match the folder name inside the tarball (e.g., repo-branch)
+    roots: ["policy-store-dev"]
+    polling:
+      min_delay_seconds: 5
+      max_delay_seconds: 10
+
+#discovery:
+#    resource: bundles/test_policy.tar.gz
