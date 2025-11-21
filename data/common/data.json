@@ -5,7 +5,7 @@
             "database-vm": ["read"]
         },
         "vm-B": {
-            "central-logger-vm": ["write"]
+            "central-logger-vm": ["write", "read"]
         }
     }
 }
