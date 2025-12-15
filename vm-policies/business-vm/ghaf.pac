@@ -8,10 +8,10 @@ function FindProxyForURL(url, host) {
         "localhost"
     ];
 
-    // VPN-only addresses
+    // VPN-only addresses that should bypass the proxy
+    // Jira can be access without VPN, so it's not included here
     var vpnOnlyAddresses = [
         "vpn.tii.ae",
-        "jira.tii.ae",
         "access.tii.ae",
         "confluence.tii.ae",
         "i-service.tii.ae",
