@@ -1,8 +1,0 @@
-{
-  "vhotplug.conf" : {
-    "version": "1.3",
-    "rules": [
-       "cp vhotplug.conf /etc/vhotplug.conf"
-    ]
-  }
-}
