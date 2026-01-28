@@ -1,4 +1,9 @@
+# 1. Ensure the table exists (does nothing if already there)
+add table inet filter
+
+# 2. Now it is safe to flush it
 flush table inet filter
+
 table inet filter {
     chain output {
         type filter hook output priority 0; policy accept;
